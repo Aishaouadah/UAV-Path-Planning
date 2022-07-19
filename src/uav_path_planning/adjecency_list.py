@@ -15,13 +15,13 @@ class AdjecencyList:
         self.adjecencyList= [ ]* self.n
 
     def print_adjecency_list(self):
-        self= cycle(self)
+        
+        
         for i in range(self.n):
             print("List of nodes of node {}",format(i),end="")
             temp = self.adjecencyList[i]
             while temp:
                 print("-> {} ",format(temp),end="")
-                temp=next(temp)
             print("\n")
 
     def add_node(self,connected_nodes):  
