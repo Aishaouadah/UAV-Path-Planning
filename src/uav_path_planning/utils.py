@@ -2,12 +2,9 @@ import math
 import numpy as np
 import cv2 as cv
 
-
-
 def image_none(img_path):
     image=cv.imread(img_path)
     return image
-
 
 def show_image(image):
     cv.imshow('image', image) 
@@ -19,7 +16,6 @@ def show_image(image):
 #image=image_none(img_path)
 #if image is not None:
 #    show_image(image)
-
 
 '''Fitness function: function that evaluate a solution
     the Fitness function is the path length  '''
@@ -69,16 +65,10 @@ def define_start_goal(image,start,goal):
 # print(image[goal[0],goal[1]])
 # show_image(define_start_goal(image,start,goal))
 
-
-def draw_path(image_path,matrix_path):
-    image=image_none(image_path)
-    rows , cols = (1073 , 1073)
+def draw_path(image,path):    
     if image is not None:
-        new_image = image
-        #get path reading the file
-        for i in range(rows):
-            for j in range(cols):
-                if matrix_path[i][j] == 'x':
-                    new_image[i][j] = 11 #yellow 
-    return new_image
+        for tuple in path:
+            print(tuple)
+            image[tuple[0],tuple[1]]=[0, 0, 255] #red
+    return image
 
