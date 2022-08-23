@@ -70,3 +70,15 @@ def define_start_goal(image,start,goal):
 # show_image(define_start_goal(image,start,goal))
 
 
+def draw_path(image_path,matrix_path):
+    image=image_none(image_path)
+    rows , cols = (1073 , 1073)
+    if image is not None:
+        new_image = image
+        #get path reading the file
+        for i in range(rows):
+            for j in range(cols):
+                if matrix_path[i][j] == 'x':
+                    new_image[i][j] = 11 #yellow 
+    return new_image
+

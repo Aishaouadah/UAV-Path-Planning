@@ -2,7 +2,10 @@
 Reading MovingAI benchmarks 
 PNG,  2D Grid Benchmark
 [Source](https://movingai.com/benchmarks/room/index.html) 
-
+About Benchmark: 
+    # [229 229 229] Grey  -> not occupied cell
+    # [0   0   0] Black   -> occupied cell (obstacle)
+    # [0 127 0]Green      -> occupied cell (obstacle)
 """
 
 # IMPORTS 
@@ -10,7 +13,6 @@ import sys
 import cv2 as cv
 import os
 import numpy as np
-import pyMetaheuristic
 
 # Checking colors 
 image = cv.imread('/home/aisha/PFE/implementations/UAV-Path-planning/data/room-png/16room_002.png')
