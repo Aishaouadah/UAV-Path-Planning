@@ -69,6 +69,6 @@ def draw_path(image,path):
     if image is not None:
         for tuple in path:
             print(tuple)
-            image[tuple[0],tuple[1]]=[0, 0, 255] #red
+            image[tuple[1],tuple[0]]=[0, 0, 255] #red
     return image
 
