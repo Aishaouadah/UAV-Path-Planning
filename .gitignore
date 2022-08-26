@@ -1,4 +1,7 @@
 src/uav_path_planning/temp
 build/
+lib/
 dist/
 pathplanning.egg-info/
+*.txt
+*.egg
