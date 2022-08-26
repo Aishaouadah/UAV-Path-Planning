@@ -1,1 +1,4 @@
 src/uav_path_planning/temp
+build/
+dist/
+pathplanning.egg-info/
