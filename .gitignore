@@ -1,5 +1,5 @@
 src/uav_path_planning/temp
 **/build
-/dist
-pathplanning.egg-info/*
-__pycache__/
+**/dist
+**/pathplanning.egg-info
+**/__pycache__

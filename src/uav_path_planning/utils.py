@@ -1,6 +1,7 @@
 import math
 import numpy as np
 import cv2 as cv
+import os
 
 def image_none(img_path):
     image=cv.imread(img_path)
@@ -42,3 +43,11 @@ def draw_path(image,path):
             image[tuple[1],tuple[0]]=[0, 0, 255] #red
     return image
 
+def save_image(img_path,path,image_name):
+    image=cv.imread(img_path)
+    new_image = draw_path(image,path)
+    saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/'
+    cv.imwrite(os.path.join(saving_path , image_name), new_image)    
+
+def isValid(node,image):
+    return  image[node[0],node[1]] == 299 
