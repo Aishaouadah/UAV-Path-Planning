@@ -50,4 +50,4 @@ def save_image(img_path,path,image_name):
     cv.imwrite(os.path.join(saving_path , image_name), new_image)    
 
 def isValid(node,image):
-    return  image[node[0],node[1]] == 299 
+    return  image[node[0],node[1]] == 229 
