@@ -33,6 +33,7 @@ def Astar(img_path,start,end,image_name):
     new_image = ut.draw_path(image,path)
     saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_a_star'
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
+    return path, runs , len(path)
 
 
 #TEST 
