@@ -11,16 +11,7 @@ from pathfinding.finder.a_star import AStarFinder
 # grey scale: 0 , 229 , 99 -> black , grey , grey (obstacle)
 
 def Astar(img_path,start,end,image_name):
-    image=cv.imread(img_path,0)
-    rows,cols=(1073,1073)    
-    # image (grey scale) to a matrix of 0 and 1 
-    for i in range(rows):
-        for j in range(cols):
-            if image[i,j] == 0 or image[i,j] == 99: 
-                image[i,j] = 0 #obstacle
-            elif image[i,j] == 229:
-                image[i,j] = 1
-    
+    image=ut.imageToMatrix(img_path)
     grid = Grid(matrix=image)
     start = grid.node(start[0],start[1])
     end = grid.node(end[0],end[1])
@@ -33,11 +24,13 @@ def Astar(img_path,start,end,image_name):
     new_image = ut.draw_path(image,path)
     saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_a_star'
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
+    
     return path, runs , len(path)
 
 
 #TEST 
 #img_path = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
+#image="64room_000.png"
 #start = (10, 200)
 #end = (90, 1009)
-#Astar(img_path,start,end)
+#path, runs , length = Astar(img_path,start,end,"new_"+str(image))
