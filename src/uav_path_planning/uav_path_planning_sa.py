@@ -23,6 +23,7 @@ one must specify the neighbourhood structure and cooling schedule."""
 setting can have a significant impact on the SA's performance."""
 
 # Imports 
+import math
 import numpy as np  
 import random as rd 
 import utils as ut
@@ -123,55 +124,46 @@ def cost(path):
 #print("path cost",cost (path)) 
 #print("new path cost",cost (new_path)) 
 
-"""
-
-Random Path, RP , Random path Length RL,
- Current
-Temperature CT ,
- Transition Probability p, 
-Geometric
-Coefficient (alpha)
-
-"""
-
 # Initializing parameters
 
-T0 = 250       # Initial temperature
-T = T0        
-Tmin = 1e-2   # Final temperature
-tau=1e2       #
-beta=1e-1     # 
-k=0           # number of iterations
-t=0 
-N= 100 # Number of iterations
-NT= 10 # Number of iterations per Temperature 
+IT = 10   # Initial temperature
+FT = 5   # Final temperature 
+N= 10 # Number of iterations
+NT= 5 # Number of iterations per Temperature 
+alpha = 0.1
+# Geometric Coefficient alpha
+# Transition Probability p
+
+def SA(matrix,start,end):  
+    CT = IT   # Current temperature
+    CP = generatePath(matrix,start,end) # current path (random)
+    CL = cost(CP) 
+    OP = CP # optimal path
+    OL = CL
+    for i in range(N):
+        for j in range(NT):
+            RP = generateNeighboringPath(matrix,CP)
+            RL = cost(RP)
+            if RL < CL:
+                CP = RP
+                CL = RL 
+            else: 
+                p = math.exp(-(RL-CL)/CT)
+                r=rd.randint(0,1)
+                if r<p:
+                    CP = RP
+                    CL = RL 
+            if CL < OL:
+                OP = CP
+                OL = CL
+        CT *= alpha 
+        if CT <= FT:
+            break 
+    return OP , OL 
 
 
-def SA(matrix,start,end):  #FIXME 
-    initialPath = generatePath(matrix,start,end)
-    initialCost = cost(currentPath)
-    currentPath = initialPath
-    currentCost = initialCost
+start=(10,10)
+end=(14,40)
+print(SA(matrix,start,end))
     
-    while T > Tmin:
-        newPath = generateNeighboringPath(matrix,start,end,currentPath)
-        if newPath == currentPath:
-            continue 
-        #move()  
-        newCost=cost(newPath)
-        if newCost <= currentCost:
-            currentCost=newCost
-
-        else: #critére de métropolis
-            dE = newCost - currentCost
-            beta=rd.uniform(0,1)
-            if beta > np.exp(-dE / T):
-                path = generateNeighboringPath(matrix,start,end) # Which path to updtae? 
-            else:
-                currentCost = newCost
-        ## Refroidissement
-        t+=1
-        T=T0*np.exp(-t/tau)
-        k+=1
-        
-        print('k=' , k , 'path hamiltonien: ', initialPath  , 'Distance du path' , initialCost , 'Température', T)
+    
