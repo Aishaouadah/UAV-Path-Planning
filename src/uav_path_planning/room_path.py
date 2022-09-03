@@ -8,7 +8,8 @@ class room_path:
         self.path_length=path_length
         self.operations=operations
         self.time=time
-    def print_path(self):
-        print("room name : " , self.room_name,", method used : ", self.method, ", test : ",self.test,", path : ",self.path, ", path length : ",self.path_length,", number of operations : ", self.operations, ", time : ", self.time)
+    def path_info(self):
+        path_info = "room name : " + str(self.room_name) + ", method used : " +  self.method + ", test : " + self.test + ", path : " + str(self.path) + ", path length : " + str(self.path_length) + ", number of operations : " + str(self.operations) + ", time : " + str(self.time)
+        return path_info
         
 

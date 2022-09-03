@@ -70,18 +70,15 @@ def findNeighbors(matrix,node):
 
 def generatePath(matrix,start,end): 
     path=[]
-    visited_nodes=[]
     path.append(start)
     node=start 
     while(node!=end):
         neighbors = findNeighbors(matrix,node)
         node=neighbors[rd.randint(0,len(neighbors)-1)]
-        if node not in visited_nodes:
-            visited_nodes.append(node) 
-            path.append(node)
+        path.append(node)
     return path
 
-#TEST  
+
 
 img_path = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
 matrix=ut.imageToMatrix(img_path)
@@ -124,11 +121,11 @@ def cost(path):
 
 # Initializing parameters
 
-IT = 5      # Initial temperature
-FT = 0.1    # Final temperature 
-N= 20       # Number of iterations
-NT= 15      # Number of iterations per Temperature 
-alpha = 0.1 # Geometric Coefficient alpha
+IT = 4      # Initial temperature
+FT = 1    # Final temperature 
+N= 10       # Number of iterations
+NT= 5      # Number of iterations per Temperature 
+alpha = 0.3 # Geometric Coefficient alpha
 
 
 def sa(matrix,start,end):  
