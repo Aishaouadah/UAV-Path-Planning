@@ -67,4 +67,39 @@ room name : new_32room_000.png, method used : astar, test : medium, path length 
 room name : new_32room_003.png, method used : astar, test : medium, path length : 1019, number of operations : 97228, time : 45.981964111328125
 room name : new_16room_003.png, method used : astar, test : medium, path length : 1076, number of operations : 147473, time : 63.885329246520996
 
-
+HARD TEST 
+room name : new_16room_001.png, method used : astar, test : hard, path length : 1443, number of operations : 340313, time : 244.65170121192932
+room name : new_64room_009.png, method used : astar, test : hard, path length : 1423, number of operations : 276667, time : 137.8304808139801
+room name : new_16room_006.png, method used : astar, test : hard, path length : 1372, number of operations : 298726, time : 199.1852536201477
+room name : new_8room_005.png, method used : astar, test : hard, path length : 1457, number of operations : 370813, time : 179.85306668281555
+room name : new_8room_004.png, method used : astar, test : hard, path length : 1453, number of operations : 340221, time : 135.55258893966675
+room name : new_64room_002.png, method used : astar, test : hard, path length : 1551, number of operations : 646754, time : 360.1696467399597
+room name : new_64room_007.png, method used : astar, test : hard, path length : 1497, number of operations : 557580, time : 320.7531986236572
+room name : new_16room_008.png, method used : astar, test : hard, path length : 1387, number of operations : 353600, time : 173.32481837272644
+room name : new_32room_006.png, method used : astar, test : hard, path length : 1441, number of operations : 470827, time : 252.59050273895264
+room name : new_16room_002.png, method used : astar, test : hard, path length : 1370, number of operations : 326057, time : 138.7701072692871
+room name : new_16room_000.png, method used : astar, test : hard,  path length : 1393, number of operations : 346406, time : 180.90518975257874
+room name : new_32room_001.png, method used : astar, test : hard,  path length : 1401, number of operations : 301408, time : 124.4445960521698
+room name : new_8room_002.png, method used : astar, test : hard, path length : 1485, number of operations : 436838, time : 180.19442582130432
+room name : new_32room_008.png, method used : astar, test : hard, path length : 1384, number of operations : 395180, time : 187.67536640167236
+room name : new_64room_006.png, method used : astar, test : hard, path length : 1412, number of operations : 239141, time : 99.9776463508606
+room name : new_64room_008.png, method used : astar, test : hard, path length : 1430, number of operations : 331530, time : 136.60499596595764
+room name : new_64room_001.png, method used : astar, test : hard, path length : 1508, number of operations : 422248, time : 178.06732034683228
+room name : new_64room_000.png, method used : astar, test : hard, path length : 1454, number of operations : 356941, time : 149.774010181427
+room name : new_16room_007.png, method used : astar, test : hard, path length : 1417, number of operations : 362412, time : 182.9019637107849
+room name : new_16room_004.png, method used : astar, test : hard, path length : 1341, number of operations : 285451, time : 133.48461651802063
+room name : new_32room_007.png, method used : astar, test : hard, path length : 1366, number of operations : 424361, time : 224.3746988773346
+room name : new_64room_005.png, method used : astar, test : hard,  path length : 1519, number of operations : 530630, time : 274.1798770427704
+room name : new_8room_009.png, method used : astar, test : hard, path length : 1455, number of operations : 359976, time : 135.67323923110962
+room name : new_8room_003.png, method used : astar, test : hard, path length : 1466, number of operations : 373639, time : 155.65110731124878
+room name : new_32room_002.png, method used : astar, test : hard, path length : 1425, number of operations : 478758, time : 256.91795682907104
+room name : new_16room_009.png, method used : astar, test : hard,  path length : 1406, number of operations : 369816, time : 179.90711402893066
+room name : new_16room_005.png, method used : astar, test : hard,  path length : 1410, number of operations : 361659, time : 164.1758894920349
+room name : new_8room_008.png, method used : astar, test : hard, path length : 1427, number of operations : 327844, time : 218.05496883392334
+room name : new_8room_001.png, method used : astar, test : hard,  path length : 1444, number of operations : 345121, time : 195.68310499191284
+room name : new_32room_004.png, method used : astar, test : hard,  path length : 1424, number of operations : 305151, time : 222.40349578857422
+room name : new_8room_000.png, method used : astar, test : hard,  path length : 1440, number of operations : 324591, time : 164.9076442718506
+room name : new_8room_006.png, method used : astar, test : hard, path length : 1430, number of operations : 341849, time : 193.7161340713501
+room name : new_32room_009.png, method used : astar, test : hard, path length : 1462, number of operations : 382933, time : 225.25106716156006
+room name : new_8room_007.png, method used : astar, test : hard,  path length : 1444, number of operations : 354284, time : 158.73713302612305
+room name : new_16room_003.png, method used : astar, test : hard,  path length : 1451, number of operations : 399781, time : 231.482524394989
