@@ -47,7 +47,6 @@ for it in IT:
                                 if ut.isValid(img_path,end):
                                     #print(str(image))
                                     start_time = time.time()
-                                    print(img)
                                     path , length = SA(img_path,start,end,"new_"+str(image),parameters)
                                     #print("--- %s seconds ---" % (time.time() - start_time))
                                     easy_output.append(room_path.room_path("new_"+str(image),"SA","easy",path , length,time.time() - start_time))
