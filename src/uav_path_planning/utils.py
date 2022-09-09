@@ -18,6 +18,16 @@ def euclidean_distance(node1, node2):
 def manhattan_distance(node1, node2):
     return abs(node1[0] - node2[0]) + abs(node1[1] - node2[1])
   
+
+def octile_distance(node1,node2):
+    dx= node2[0] - node1[0]
+    dy= node2[1] - node1[1]
+    f = math.sqrt(2) - 1
+    if dx < dy:
+        return f * dx + dy
+    else:
+        return f * dy + dx
+
 def coloring_pixel(image,color,pixel):
     if image is  not None:
         image[pixel[0],pixel[1]]=color

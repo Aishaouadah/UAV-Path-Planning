@@ -111,7 +111,7 @@ def generateNeighboringPath(matrix,path):
 def cost(path):
     distance=0
     for i in range(len(path)-1):
-        distance+=ut.euclidean_distance(path[i],path[i+1])
+        distance+=ut.octile_distance(path[i],path[i+1])
     return distance
 
 #TEST
@@ -121,24 +121,24 @@ def cost(path):
 
 # Initializing parameters
 
-IT = 4      # Initial temperature
+IT = 2      # Initial temperature
 FT = 1    # Final temperature 
-N= 10       # Number of iterations
-NT= 5      # Number of iterations per Temperature 
-alpha = 0.3 # Geometric Coefficient alpha
+N= 3       # Number of iterations
+NT= 2      # Number of iterations per Temperature 
+alpha = 0.9 # Geometric Coefficient alpha
 
 
 def sa(matrix,start,end):  
     CT = IT   # Current temperature
     CP = generatePath(matrix,start,end) # current path (random)
-    CL = len(CP) 
+    CL = cost(CP) 
     OP = CP # optimal path
     OL = CL
     for i in range(N):
         print("i= ",i)
         for j in range(NT):
             RP = generateNeighboringPath(matrix,CP)
-            RL = len(RP)
+            RL = cost(RP)  
             if RL < CL:
                 CP = RP
                 CL = RL 
@@ -171,6 +171,7 @@ def SA(img_path,start,end,image_name):
     new_image = ut.draw_path(img_path,op) 
     saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_sa'
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
+    # FIXME : Make start and end with different colors 
     return op, ol 
 
 #TEST
