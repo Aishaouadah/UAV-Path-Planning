@@ -1,2 +1,2 @@
-__all__=['test1','test2','test3','output']
+__all__=['test_a_star','test_sa','test_a_star_colab','output']
 print("init test")

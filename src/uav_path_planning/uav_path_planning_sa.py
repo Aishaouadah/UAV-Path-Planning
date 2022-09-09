@@ -1,5 +1,5 @@
 #NOTE 
-"""
+""" 
 SA Algorithm: 
 Initialisation 
 Trouver une solution initiale x ( aléatoirement ou avec une heuristique) 
@@ -13,19 +13,14 @@ Tant que Test d'arrêt non satisfait
         Alors x = x' 
     Mettre a jour la température de refroidissement T (Abaisser In température) 
 Fin boucle Tant que 
-
 """
 
-"""In order to apply the SA algorithm to a specific problem, 
-one must specify the neighbourhood structure and cooling schedule."""
-
-"""These choices and their corresponding parameter
-setting can have a significant impact on the SA's performance."""
+"""parameter setting can have a significant impact on the SA's performance."""
 
 # Imports 
 import math
 import random as rd 
-import utils as ut
+import src.uav_path_planning.utils as ut
 import cv2 as cv
 import os
 
@@ -78,20 +73,8 @@ def generatePath(matrix,start,end):
         path.append(node)
     return path
 
-
-
-img_path = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
-matrix=ut.imageToMatrix(img_path)
-
-#start=(10,10)
-#end=(140,80)
-#print(ut.isValid(img_path,start),ut.isValid(img_path,end))
-#path=generatePath(matrix,start,end)
-#image=ut.draw_path(img_path,path) 
-
-#saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_sa'
-#scv.imwrite(os.path.join(saving_path ,"new_64room_000.png"), image)
-    
+#img_path = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
+#matrix=ut.imageToMatrix(img_path)
 
 def generateNeighboringPath(matrix,path): 
     x=rd.randint(0,len(path)-2)
@@ -101,35 +84,18 @@ def generateNeighboringPath(matrix,path):
     output[x+1:]=generatePath(matrix,output[x+1],output[-1])
     return output
 
-#TEST
-#path =[ (139, 75) ,(138, 76) , (138, 77) , (139, 76) , (140, 76) , (138, 75) ,(140, 77) ]
-#print("path : " , path)
-#new_path = generateNeighboringPath(matrix,path)
-#print("new path : " ,new_path)
-
-
 def cost(path):
     distance=0
     for i in range(len(path)-1):
         distance+=ut.octile_distance(path[i],path[i+1])
     return distance
 
-#TEST
-
-#print("path cost",cost (path)) 
-#print("new path cost",cost (new_path)) 
-
-# Initializing parameters
-
-IT = 2      # Initial temperature
-FT = 1    # Final temperature 
-N= 3       # Number of iterations
-NT= 2      # Number of iterations per Temperature 
-alpha = 0.9 # Geometric Coefficient alpha
-
-
-def sa(matrix,start,end):  
-    CT = IT   # Current temperature
+def sa(matrix,start,end , parameters):  
+    CT = parameters['IT']  # Current temperature
+    N= parameters['N']
+    NT= parameters['NT'] 
+    alpha = parameters['alpha']
+    FT = parameters['FT']
     CP = generatePath(matrix,start,end) # current path (random)
     CL = cost(CP) 
     OP = CP # optimal path
@@ -157,14 +123,13 @@ def sa(matrix,start,end):
     return OP , OL 
 
 
-start=(10,9)
-end=(14,40)
-#print(sa(matrix,start,end)) 
-# Save image
+#start=(10,9)
+#end=(14,40)
 
-def SA(img_path,start,end,image_name):
+# Save image
+def SA(img_path,start,end,image_name,parameters):
     image=ut.imageToMatrix(img_path)
-    op , ol = sa(image,start,end) 
+    op , ol = sa(image,start,end,parameters) 
     print("optimal path " , op , "path length " , ol)     
     #Draw path in the image and save it
     image=cv.imread(img_path)
@@ -175,7 +140,15 @@ def SA(img_path,start,end,image_name):
     return op, ol 
 
 #TEST
-
-img_path="/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
-image_name = "64room_000.png"
-print(SA(img_path,start,end,"new_"+image_name))    
+# Initializing parameters
+"""
+parameters = {}
+parameters['IT'] = 2      # Initial temperature
+parameters['FT'] = 1    # Final temperature 
+parameters['N']  = 3       # Number of iterations
+parameters['NT']= 2      # Number of iterations per Temperature 
+parameters['alpha'] = 0.9 # Geometric Coefficient alpha
+"""
+#img_path="/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
+#image_name = "64room_000.png"
+#print(SA(img_path,start,end,"new_"+image_name,parameters))    

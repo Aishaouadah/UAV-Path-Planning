@@ -10,7 +10,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/Aishaouadah/UAV-Path-Planning",
-    version="1.0.1",
+    version="1.0",
     license="MIT",
     author="Aicha OUADAH",
     packages=find_packages(),
