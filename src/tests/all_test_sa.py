@@ -11,19 +11,21 @@ from src.uav_path_planning import utils as ut
 
 
 folder_dir = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png"
+#folder_dir = ".../data/room-png"
 file = open("/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_sa/all_results.txt","w")
+#file = open("/output/output_sa/all_results.txt","w")
 
 
 #-------------------PARAMETER TUNING---------------------------------------- 
 
 file.write("\nPARAMETER TUNING \n")
 
-IT = [ 1,2 ] 
-FT = [ 0,1 ]
-N =[ 1,2 ] 
-NT = [ 1,2 ] 
-alpha = [ 0.9 , 0.8 ]
-images=["8room_000.png" ] #32 #,"16room_000.png","32room_000.png","64room_000.png"] # 128
+IT = [ 2,4 ] 
+FT = [ 1,2 ]
+N =[ 2,3 ] 
+NT = [ 2,3 ] 
+alpha = [ 0.9 , 0.5 ]
+images=["8room_000.png","16room_000.png","32room_000.png","64room_000.png"] # 128
 
 start = (9, 9)
 end = (10, 15)

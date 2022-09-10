@@ -24,6 +24,7 @@ import src.uav_path_planning.utils as ut
 import cv2 as cv
 import os
 
+
 def findNeighbors(matrix,node):
     #check validity and return neighbors to choose randomly one of them
     neighbors=[]
@@ -58,10 +59,10 @@ def generatePath(matrix,start,end):
     node=start 
     while(node!=end):
         neighbors = findNeighbors(matrix,node)
-        node=neighbors[rd.randint(0,len(neighbors)-1)]
+        node=neighbors[rd.randint(0,len(neighbors)-2)]
         path.append(node)
     return path
- 
+
 def generateNeighboringPath(matrix,path): 
     x=rd.randint(0,len(path)-2)
     neighbors=findNeighbors(matrix,path[x])
@@ -96,7 +97,7 @@ def sa(matrix,start,end , parameters):
                 CL = RL 
             else: 
                 p = math.exp(-(RL-CL)/CT) # Transition Probability 
-                r=rd.randint(0,1)
+                r= rd.uniform(0, 1)
                 if r<p:
                     CP = RP
                     CL = RL 
@@ -110,13 +111,12 @@ def sa(matrix,start,end , parameters):
 
 
 # Save image
-def SA(img_path,start,end,image_name,parameters):
+def SA(img_path,start,end,image_name,parameters,test):
     image=ut.imageToMatrix(img_path)
     op , ol = sa(image,start,end,parameters) 
     #Draw path in the image and save it
     image=cv.imread(img_path)
     new_image = ut.draw_path(img_path,op) 
-    saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_sa'
+    saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_sa/'+test
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
-    # FIXME : Make start and end with different colors 
     return op, ol 

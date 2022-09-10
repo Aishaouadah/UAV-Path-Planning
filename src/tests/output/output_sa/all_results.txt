@@ -1,2 +1,5 @@
 
 PARAMETER TUNING 
+room name : 0new_8room_000.png, test : easy, path length : 32.7746032555838, time : 4.7455408573150635it: 1 ft: 0 n: 1 nt: 1 alpha: 0.9
+room name : 1new_8room_000.png, test : easy, path length : 11.686291501015239, time : 4.8081207275390625it: 1 ft: 0 n: 1 nt: 1 alpha: 0.8
+room name : 2new_8room_000.png, test : easy, path length : 25.159379566434037, time : 4.54897928237915it: 1 ft: 0 n: 1 nt: 2 alpha: 0.9
