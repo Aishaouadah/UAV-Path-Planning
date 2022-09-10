@@ -28,13 +28,13 @@ start = (10, 9)
 end = (14, 40)
 easy_output =[]
 i=0
-for it in IT:
-    for ft in FT:
-        for n in N:
-            for nt in NT:
-                for a in alpha:
-                # Test the 4 images and save results    
-                    for image in images:
+for image in images:
+    for it in IT:
+        for ft in FT:
+            for n in N:
+                for nt in NT:
+                    for a in alpha:
+                    # Test the 4 images and save results    
                        # Initializing parameters
                         parameters = {}
                         parameters['IT'] = it     # Initial temperature
@@ -49,13 +49,13 @@ for it in IT:
                                 if ut.isValid(img_path,end):
                                     print(str(image))
                                     start_time = time.time()
-                                    path , length = SA(img_path,start,end,"new_"+str(i)+str(image),parameters)
-                                    i=i+1
+                                    path , length = SA(img_path,start,end,str(i)+"new_"+str(image),parameters)
                                     print("--- %s seconds ---" % (time.time() - start_time))
-                                    easy_output.append(room_path.room_path("new_"+str(image),"SA","easy" ,path, length,0,time.time() - start_time))
+                                    easy_output.append(room_path.room_path(str(i)+"new_"+str(image),"SA","easy" ,path, length,0,time.time() - start_time))
                                     pathInfo = easy_output[-1].path_info()
                                     print(pathInfo)
                                     file.write(pathInfo +"it: "+str(it)+" ft: "+str(ft)+" n: "+str(n)+" nt: "+str(nt)+" alpha: "+str(alpha) + "\n")
+                                    i=i+1
                                 else:
                                     print(str(image) ,"invalid end")
                             else:
