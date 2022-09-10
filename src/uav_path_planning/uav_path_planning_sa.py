@@ -27,41 +27,30 @@ import os
 def findNeighbors(matrix,node):
     #check validity and return neighbors to choose randomly one of them
     neighbors=[]
-
     if matrix[node[0]+1,node[1]] == 1:
-        neighbor = (node[0]+1,node[1])
-        neighbors.append(neighbor)
-
+        neighbors.append((node[0]+1,node[1]))
     if matrix[node[0],node[1]+1]==1:
-        neighbor = (node[0],node[1]+1)
-        neighbors.append(neighbor)
+        neighbors.append((node[0],node[1]+1))
 
     if matrix[node[0]+1,node[1]+1]==1:
-        neighbor = (node[0]+1,node[1]+1)
-        neighbors.append(neighbor)
+        neighbors.append((node[0]+1,node[1]+1))
 
     if matrix[node[0]-1,node[1]]==1:
-        neighbor = (node[0]-1,node[1])
-        neighbors.append(neighbor)
-    
+        neighbors.append((node[0]-1,node[1]))
+        
     if matrix[node[0],node[1]-1]==1:
-        neighbor = (node[0],node[1]-1)
-        neighbors.append(neighbor)
+        neighbors.append( (node[0],node[1]-1))
 
     if matrix[node[0]-1,node[1]-1]==1:
-        neighbor = (node[0]-1,node[1]-1)
-        neighbors.append(neighbor)
+        neighbors.append((node[0]-1,node[1]-1))
 
     if matrix[node[0]-1,node[1]+1]==1:
-        neighbor = (node[0]-1,node[1]+1)
-        neighbors.append(neighbor)
+        neighbors.append((node[0]-1,node[1]+1))
 
     if matrix[node[0]+1,node[1]-1]==1:
-        neighbor = (node[0]+1,node[1]-1)
-        neighbors.append(neighbor) 
+        neighbors.append((node[0]+1,node[1]-1)) 
 
     return neighbors
-
 
 def generatePath(matrix,start,end): 
     path=[]
@@ -72,10 +61,7 @@ def generatePath(matrix,start,end):
         node=neighbors[rd.randint(0,len(neighbors)-1)]
         path.append(node)
     return path
-
-#img_path = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
-#matrix=ut.imageToMatrix(img_path)
-
+ 
 def generateNeighboringPath(matrix,path): 
     x=rd.randint(0,len(path)-2)
     neighbors=findNeighbors(matrix,path[x])
@@ -123,14 +109,10 @@ def sa(matrix,start,end , parameters):
     return OP , OL 
 
 
-#start=(10,9)
-#end=(14,40)
-
 # Save image
 def SA(img_path,start,end,image_name,parameters):
     image=ut.imageToMatrix(img_path)
     op , ol = sa(image,start,end,parameters) 
-    print("optimal path " , op , "path length " , ol)     
     #Draw path in the image and save it
     image=cv.imread(img_path)
     new_image = ut.draw_path(img_path,op) 
@@ -138,17 +120,3 @@ def SA(img_path,start,end,image_name,parameters):
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
     # FIXME : Make start and end with different colors 
     return op, ol 
-
-#TEST
-# Initializing parameters
-"""
-parameters = {}
-parameters['IT'] = 2      # Initial temperature
-parameters['FT'] = 1    # Final temperature 
-parameters['N']  = 3       # Number of iterations
-parameters['NT']= 2      # Number of iterations per Temperature 
-parameters['alpha'] = 0.9 # Geometric Coefficient alpha
-"""
-#img_path="/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png/64room_000.png"
-#image_name = "64room_000.png"
-#print(SA(img_path,start,end,"new_"+image_name,parameters))    

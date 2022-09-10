@@ -48,6 +48,7 @@ def define_start_goal(image,start,goal):
 
 def draw_path(img_path,path):    
     image=cv.imread(img_path)
+    path = set(path)
     if image is not None:
         for tuple in path:
             print(tuple)

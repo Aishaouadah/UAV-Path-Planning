@@ -9,7 +9,7 @@ class room_path:
         self.operations=operations
         self.time=time
     def path_info(self):
-        path_info = "room name : " + str(self.room_name) + ", method used : " +  self.method + ", test : " + self.test + ", path : " + str(self.path) + ", path length : " + str(self.path_length) + ", number of operations : " + str(self.operations) + ", time : " + str(self.time)
+        path_info = "room name : " + str(self.room_name)+", test : " + self.test +", path length : " + str(self.path_length) + ", time : " + str(self.time)
         return path_info
         
 
