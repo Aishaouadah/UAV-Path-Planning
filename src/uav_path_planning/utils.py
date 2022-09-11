@@ -28,6 +28,14 @@ def octile_distance(node1,node2):
     else:
         return f * dy + dx
 
+
+def octile(path):
+    distance=0
+    for i in range(len(path)-1):
+        distance+=octile_distance(path[i],path[i+1])
+    return distance
+
+
 def coloring_pixel(image,color,pixel):
     if image is  not None:
         image[pixel[0],pixel[1]]=color

@@ -9,15 +9,15 @@ from src.uav_path_planning.uav_path_planning_a_star import Astar
 from src.uav_path_planning import room_path 
 from src.uav_path_planning import utils as ut
 
-
 folder_dir = "/home/aisha/PFE/implementations/UAV-Path-Planning/data/room-png"
 file= open("/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_a_star/recap.txt","w")
 #-------------------EASY TEST---------------------------------------- 
 
+file.write("\nEASY TEST \n")
+
 start = (133, 30)
 end = (21, 201)
 
-easy_output=[]
 for image in listdir(folder_dir):
     img_path=folder_dir+"/"+str(image)
     img=cv.imread(img_path,0)
@@ -28,29 +28,27 @@ for image in listdir(folder_dir):
                 start_time = time.time()
                 path, runs , length = Astar(img_path,start,end,"new_"+str(image),"easy")
                 #print("--- %s seconds ---" % (time.time() - start_time))
-                easy_output.append(room_path.room_path("new_"+str(image),"astar","easy" , path,length,runs,time.time() - start_time))
+                pathInfo=(room_path.room_path("new_"+str(image),"astar","easy" , path,length,runs,time.time() - start_time)).path_info()
+                file.write(pathInfo+"\n")
+                
             else:
                 print(str(image) ,"invalid end")
         else:
             print(str(image),"invalid start")
     else:
         print("image is None")
-file.write("\nEASY TEST \n")
-print("length (easy output) : ",len(easy_output))        
-for i in range(len(easy_output)):
-    pathInfo = easy_output[i].path_info()
-    print(pathInfo)
-    file.write((str(pathInfo)+"\n"))
+    
 
 
 #-------------------Medium TEST---------------------------------------- 
+file.write("\nMEDIUM TEST \n")
 
 # CHANGE START , END
 
 start = (18, 30)
 end = (21, 1001)
 
-medium_output=[]
+
 for image in listdir(folder_dir):
     img_path=folder_dir+"/"+str(image)
     img=cv.imread(img_path,0)
@@ -61,8 +59,8 @@ for image in listdir(folder_dir):
                 start_time = time.time()
                 path, runs , length = Astar(img_path,start,end,"new_"+str(image),"medium")
                 #print("--- %s seconds ---" % (time.time() - start_time))
-                medium_output.append(room_path.room_path("new_"+str(image),"astar","medium" , path,length,runs,time.time() - start_time))
-                
+                pathInfo=(room_path.room_path("new_"+str(image),"astar","medium" , path,length,runs,time.time() - start_time)).path_info()
+                file.write(pathInfo+"/n")
             else:
                 print(str(image) ,"invalid end")
         else:
@@ -70,22 +68,18 @@ for image in listdir(folder_dir):
     else:
         print("image is None")
 
-file.write("\nMEDIUM TEST \n")
-print("length (medium output) : ",len(medium_output))        
-for i in range(len(medium_output)):
-    pathInfo = medium_output[i].path_info()
-    print(pathInfo)
-    file.write((pathInfo+"\n"))
 
 
 #-------------------HARD TEST---------------------------------------- 
+
+file.write("\nHARD TEST \n")
 
 # CHANGE START , END
 
 start = (12, 30)
 end = (1040, 990)
 
-hard_output=[]
+
 for image in listdir(folder_dir):
     img_path=folder_dir+"/"+str(image)
     img=cv.imread(img_path,0)
@@ -96,17 +90,13 @@ for image in listdir(folder_dir):
                 start_time = time.time()
                 path, runs , length = Astar(img_path,start,end,"new_"+str(image),"hard")
                 #print("--- %s seconds ---" % (time.time() - start_time))
-                hard_output.append(room_path.room_path("new_"+str(image),"astar","hard" ,path, length,runs,time.time() - start_time))
+                pathInfo = (room_path.room_path("new_"+str(image),"astar","hard" ,path, length,runs,time.time() - start_time)).path_info()
+                file.write(pathInfo+"/n")
             else:
                 print(str(image) ,"invalid end")
         else:
             print(str(image),"invalid start")
     else:
         print("image is None")
-file.write("\nHARD TEST \n")
-print("length (hard output) : ",len(hard_output))        
-for i in range(len(hard_output)):
-    pathInfo = hard_output[i].path_info()
-    print(pathInfo)
-    file.write((pathInfo+"\n"))
+
 

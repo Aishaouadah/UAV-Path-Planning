@@ -1,0 +1,55 @@
+room name : 0new_8room_004.png, test : easy, path length : 1034.8958184687674, time : 6.014766216278076it: 2 ft: 0 n: 2 nt: 2 alpha: 0.8
+
+
+
+
+for
+start = (29, 39)
+end = (21, 50)
+
+result 
+
+room name : 0new_8room_000.png, test : easy, path length : 14.129942314911187, time : 4.357181072235107it: 2 ft: 1 n: 2 nt: 2 alpha: 0.8
+
+
+room name : 0new_8room_000.png, test : easy, path length : 18.058874503045704, time : 4.370331048965454it: 2 ft: 0 n: 2 nt: 2 alpha: 0.8
+
+
+room name : 0new_8room_000.png, test : easy, path length : 33.875108318972124, time : 4.406431198120117it: 2 ft: 0 n: 2 nt: 2 alpha: 0.8
+(29, 38)(21, 50)
+
+room name : 0new_8room_000.png, test : easy, path length : 31.91673887931475, time : 4.374218702316284it: 2 ft: 0 n: 2 nt: 2 alpha: 0.8
+(21, 38)(21, 50)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

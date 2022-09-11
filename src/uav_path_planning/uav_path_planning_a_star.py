@@ -17,7 +17,7 @@ def Astar(img_path,start,end,image_name,test):
     end = grid.node(end[0],end[1])
     finder = AStarFinder(diagonal_movement=DiagonalMovement.always)
     path, runs = finder.find_path(start, end, grid)
-    print("path length: ",len(path) , "runs: " , runs)
+    print("path length: ",ut.octile(path) , "runs: " , runs)
         
     #Draw path in the image and save it
     image=cv.imread(img_path)
@@ -25,5 +25,5 @@ def Astar(img_path,start,end,image_name,test):
     saving_path = '/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/output_a_star/'+test
     cv.imwrite(os.path.join(saving_path ,image_name), new_image)
     
-    return path, runs , len(path)
+    return path, runs , ut.octile(path)
 

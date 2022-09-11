@@ -18,15 +18,16 @@ file = open("/home/aisha/PFE/implementations/UAV-Path-Planning/src/tests/output/
 
 file.write("\nPARAMETER TUNING \n")
 
-IT = [ 1,2 ] 
-FT = [ 0,1 ]
-N =[ 1,2 ] 
-NT = [ 1,2 ] 
-alpha = [ 0.9 , 0.8 ]
-images=["8room_000.png" ] #32 #,"16room_000.png","32room_000.png","64room_000.png"] # 128
+IT = [ 2 ] 
+FT = [ 0 ]
+N =[ 2 ] 
+NT = [ 2] 
+alpha = [ 0.8 ]
+images=["8room_005.png" ] #32 #,"16room_000.png","32room_000.png","64room_000.png"] # 128
 
-start = (9, 9)
-end = (10, 15)
+start = (50, 30)
+end = (21, 10)
+
 easy_output =[]
 i=0
 
