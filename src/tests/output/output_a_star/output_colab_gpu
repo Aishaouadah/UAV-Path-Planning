@@ -1,0 +1,243 @@
+
+
+folder_dir = "/content/"
+file= open("/content/colab_results.txt","w")
+#-------------------EASY TEST---------------------------------------- 
+
+file.write("\nEASY TEST \n")
+
+start = (29,38)
+end = (21,50)
+
+
+/content/8room_004.png
+path length:  8.686291501015239 runs:  39
+room name : new_8room_004.png, test : easy, path length : 8.686291501015239, time : 7.616967678070068
+/content/16room_004.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_004.png, test : easy, path length : 8.686291501015239, time : 7.273627758026123
+/content/32room_008.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_008.png, test : easy, path length : 8.686291501015239, time : 7.268943786621094
+/content/16room_009.png
+path length:  8.686291501015239 runs:  35
+room name : new_16room_009.png, test : easy, path length : 8.686291501015239, time : 7.293569326400757
+/content/64room_009.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_009.png, test : easy, path length : 8.686291501015239, time : 7.575352191925049
+/content/8room_006.png
+path length:  8.686291501015239 runs:  39
+room name : new_8room_006.png, test : easy, path length : 8.686291501015239, time : 6.814105033874512
+/content/16room_000.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_000.png, test : easy, path length : 8.686291501015239, time : 7.27413010597229
+/content/colab_results.txt
+image is None
+/content/8room_007.png
+path length:  8.686291501015239 runs:  39
+room name : new_8room_007.png, test : easy, path length : 8.686291501015239, time : 6.5612547397613525
+/content/16room_005.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_005.png, test : easy, path length : 8.686291501015239, time : 7.147916316986084
+/content/64room_007.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_007.png, test : easy, path length : 8.686291501015239, time : 7.442464828491211
+/content/64room_000.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_000.png, test : easy, path length : 8.686291501015239, time : 8.564981698989868
+/content/8room_003.png
+path length:  8.686291501015239 runs:  39
+room name : new_8room_003.png, test : easy, path length : 8.686291501015239, time : 6.684727191925049
+/content/8room_005.png
+path length:  8.686291501015239 runs:  35
+room name : new_8room_005.png, test : easy, path length : 8.686291501015239, time : 6.682331085205078
+/content/32room_009.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_009.png, test : easy, path length : 8.686291501015239, time : 7.451646089553833
+/content/8room_009.png
+path length:  8.686291501015239 runs:  35
+room name : new_8room_009.png, test : easy, path length : 8.686291501015239, time : 6.680124521255493
+/content/32room_007.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_007.png, test : easy, path length : 8.686291501015239, time : 7.305076837539673
+/content/32room_003.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_003.png, test : easy, path length : 8.686291501015239, time : 7.347303867340088
+/content/8room_001.png
+path length:  8.686291501015239 runs:  35
+room name : new_8room_001.png, test : easy, path length : 8.686291501015239, time : 6.7622230052948
+/content/32room_000.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_000.png, test : easy, path length : 8.686291501015239, time : 7.319149732589722
+/content/8room_000.png
+path length:  8.686291501015239 runs:  35
+room name : new_8room_000.png, test : easy, path length : 8.686291501015239, time : 6.697448253631592
+/content/16room_008.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_008.png, test : easy, path length : 8.686291501015239, time : 7.0969672203063965
+/content/16room_003.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_003.png, test : easy, path length : 8.686291501015239, time : 7.117791414260864
+/content/64room_004.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_004.png, test : easy, path length : 8.686291501015239, time : 7.422119379043579
+/content/32room_006.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_006.png, test : easy, path length : 8.686291501015239, time : 7.297632217407227
+/content/16room_001.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_001.png, test : easy, path length : 8.686291501015239, time : 7.026819705963135
+/content/32room_004.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_004.png, test : easy, path length : 8.686291501015239, time : 7.281803846359253
+/content/8room_002.png
+path length:  8.686291501015239 runs:  35
+room name : new_8room_002.png, test : easy, path length : 8.686291501015239, time : 6.653404235839844
+/content/32room_005.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_005.png, test : easy, path length : 8.686291501015239, time : 7.410894870758057
+/content/64room_008.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_008.png, test : easy, path length : 8.686291501015239, time : 7.595771312713623
+/content/64room_005.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_005.png, test : easy, path length : 8.686291501015239, time : 7.513213396072388
+/content/16room_006.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_006.png, test : easy, path length : 8.686291501015239, time : 7.1242475509643555
+/content/64room_001.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_001.png, test : easy, path length : 8.686291501015239, time : 7.424853324890137
+/content/64room_006.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_006.png, test : easy, path length : 8.686291501015239, time : 7.398478746414185
+/content/8room_008.png
+path length:  8.686291501015239 runs:  39
+room name : new_8room_008.png, test : easy, path length : 8.686291501015239, time : 6.711587429046631
+/content/16room_002.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_002.png, test : easy, path length : 8.686291501015239, time : 7.04350471496582
+/content/32room_001.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_001.png, test : easy, path length : 8.686291501015239, time : 7.423092603683472
+/content/16room_007.png
+path length:  8.686291501015239 runs:  39
+room name : new_16room_007.png, test : easy, path length : 8.686291501015239, time : 7.042353391647339
+/content/64room_002.png
+path length:  8.686291501015239 runs:  36
+room name : new_64room_002.png, test : easy, path length : 8.686291501015239, time : 8.49479365348816
+/content/64room_003.png
+64room_003.png invalid start
+/content/32room_002.png
+path length:  8.686291501015239 runs:  36
+room name : new_32room_002.png, test : easy, path length : 8.686291501015239, time : 7.4160754680633545
+/content/sample_data
+image is None
+image is None
+8room_004.png invalid start
+path length:  985.7157287525379 runs:  116006
+room name : new_16room_004.png, test : medium, path length : 985.7157287525379, time : 36.4908013343811
+path length:  1001.5319625684635 runs:  139265
+room name : new_32room_008.png, test : medium, path length : 1001.5319625684635, time : 42.655452489852905
+path length:  990.9878066911793 runs:  152925
+room name : new_16room_009.png, test : medium, path length : 990.9878066911793, time : 63.251044511795044
+path length:  1038.4365081389576 runs:  267499
+room name : new_64room_009.png, test : medium, path length : 1038.4365081389576, time : 86.77933883666992
+8room_006.png invalid start
+path length:  1006.2182540694789 runs:  136435
+room name : new_16room_000.png, test : medium, path length : 1006.2182540694789, time : 56.066861629486084
+image is None
+8room_007.png invalid start
+path length:  982.2010101267765 runs:  135339
+room name : new_16room_005.png, test : medium, path length : 982.2010101267765, time : 39.58161735534668
+path length:  973.4142135623729 runs:  152535
+room name : new_64room_007.png, test : medium, path length : 973.4142135623729, time : 62.161200284957886
+path length:  1013.8334777586281 runs:  207451
+room name : new_64room_000.png, test : medium, path length : 1013.8334777586281, time : 74.99718761444092
+8room_003.png invalid start
+8room_005.png invalid start
+path length:  998.6030303803292 runs:  97228
+room name : new_32room_009.png, test : medium, path length : 998.6030303803292, time : 32.31220054626465
+8room_009.png invalid start
+path length:  975.171572875254 runs:  98625
+room name : new_32room_007.png, test : medium, path length : 975.171572875254, time : 30.584157466888428
+path length:  1006.8040405071051 runs:  177549
+room name : new_32room_003.png, test : medium, path length : 1006.8040405071051, time : 69.3334276676178
+8room_001.png invalid start
+path length:  983.9583694396566 runs:  202263
+room name : new_32room_000.png, test : medium, path length : 983.9583694396566, time : 60.95383954048157
+8room_000.png invalid start
+path length:  983.3725830020295 runs:  137942
+room name : new_16room_008.png, test : medium, path length : 983.3725830020295, time : 46.096065282821655
+path length:  1003.8751083189716 runs:  147473
+room name : new_16room_003.png, test : medium, path length : 1003.8751083189716, time : 46.10761332511902
+path length:  978.686291501014 runs:  106138
+room name : new_64room_004.png, test : medium, path length : 978.686291501014, time : 45.874274253845215
+path length:  990.9878066911801 runs:  144953
+room name : new_32room_006.png, test : medium, path length : 990.9878066911801, time : 49.15544152259827
+path length:  1026.7207793864204 runs:  154614
+room name : new_16room_001.png, test : medium, path length : 1026.7207793864204, time : 68.69067192077637
+32room_004.png invalid end
+8room_002.png invalid start
+path length:  975.1715728752541 runs:  110010
+room name : new_32room_005.png, test : medium, path length : 975.1715728752541, time : 36.10491347312927
+path length:  979.8578643762678 runs:  191910
+room name : new_64room_008.png, test : medium, path length : 979.8578643762678, time : 75.41205787658691
+path length:  972.2426406871194 runs:  102187
+room name : new_64room_005.png, test : medium, path length : 972.2426406871194, time : 39.91036033630371
+path length:  982.786796564403 runs:  133580
+room name : new_16room_006.png, test : medium, path length : 982.786796564403, time : 42.115848541259766
+path length:  0 runs:  1075301
+room name : new_64room_001.png, test : medium, path length : 0, time : 350.5239908695221
+path length:  1067.1400435826758 runs:  502672
+room name : new_64room_006.png, test : medium, path length : 1067.1400435826758, time : 175.7733166217804
+path length:  982.7867965644034 runs:  76735
+room name : new_8room_008.png, test : medium, path length : 982.7867965644034, time : 19.964850187301636
+path length:  994.5025253169413 runs:  105537
+room name : new_16room_002.png, test : medium, path length : 994.5025253169413, time : 32.72524642944336
+path length:  998.0172439427017 runs:  132419
+room name : new_32room_001.png, test : medium, path length : 998.0172439427017, time : 62.6609845161438
+path length:  988.0588745030449 runs:  111337
+room name : new_16room_007.png, test : medium, path length : 988.0588745030449, time : 38.96141314506531
+path length:  972.2426406871191 runs:  117534
+room name : new_64room_002.png, test : medium, path length : 972.2426406871191, time : 39.890421867370605
+64room_003.png invalid start
+path length:  975.1715728752538 runs:  154362
+room name : new_32room_002.png, test : medium, path length : 975.1715728752538, time : 53.98608446121216
+image is None
+image is None
+path length:  1672.261110119104 runs:  340221
+room name : new_8room_004.png, test : hard, path length : 1672.261110119104, time : 180.82188320159912
+path length:  1608.410388417772 runs:  285451
+room name : new_16room_004.png, test : hard, path length : 1608.410388417772, time : 194.56123900413513
+path length:  1633.5992052357285 runs:  395180
+room name : new_32room_008.png, test : hard, path length : 1633.5992052357285, time : 267.14312767982483
+path length:  1644.7291475506397 runs:  369816
+room name : new_16room_009.png, test : hard, path length : 1644.7291475506397, time : 267.94465804100037
+path length:  1656.4448763031776 runs:  276667
+room name : new_64room_009.png, test : hard, path length : 1656.4448763031776, time : 126.78945970535278
+path length:  0 runs:  1
+room name : new_8room_006.png, test : hard, path length : 0, time : 6.387590646743774
+path length:  1637.1139238614905 runs:  346406
+room name : new_16room_000.png, test : hard, path length : 1637.1139238614905, time : 276.734747171402
+image is None
+path length:  1666.9890321804617 runs:  354284
+room name : new_8room_007.png, test : hard, path length : 1666.9890321804617, time : 191.55103015899658
+path length:  1648.8296526140282 runs:  361659
+room name : new_16room_005.png, test : hard, path length : 1648.8296526140282, time : 241.60520577430725
+path length:  1698.6214998123137 runs:  557580
+room name : new_64room_007.png, test : hard, path length : 1698.6214998123137, time : 475.60348558425903
+path length:  1673.4326829943575 runs:  356941
+room name : new_64room_000.png, test : hard, path length : 1673.4326829943575, time : 215.08297300338745
+path length:  1681.0479066835073 runs:  373639
+room name : new_8room_003.png, test : hard, path length : 1681.0479066835073, time : 220.25373578071594
+path length:  1672.2611101191037 runs:  370813
+room name : new_8room_005.png, test : hard, path length : 1672.2611101191037, time : 198.97360730171204
+path length:  1679.2905473706267 runs:  382933
+room name : new_32room_009.png, test : hard, path length : 1679.2905473706267, time : 274.46231842041016
+path length:  1674.6042558696115 runs:  359976
+room name : new_8room_009.png, test : hard, path length : 1674.6042558696115, time : 201.4825782775879
+path length:  1623.0550493584444 runs:  424361
+room name : new_32room_007.png, test : hard, path length : 1623.0550493584444, time : 337.83353781700134
+path length:  1660.5453813665656 runs:  341849
+room name : new_32room_003.png, test : hard, path length : 1660.5453813665656, time : 215.46369647979736

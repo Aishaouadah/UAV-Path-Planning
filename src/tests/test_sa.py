@@ -23,7 +23,7 @@ FT = [ 0 ]
 N =[ 2 ] 
 NT = [ 2] 
 alpha = [ 0.8 ]
-images=["8room_005.png" ] #32 #,"16room_000.png","32room_000.png","64room_000.png"] # 128
+images=["8room_001.png" ] #32 #,"16room_000.png","32room_000.png","64room_000.png"] # 128
 
 start = (50, 30)
 end = (21, 10)
